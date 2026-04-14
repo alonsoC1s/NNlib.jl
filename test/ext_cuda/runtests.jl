@@ -5,6 +5,7 @@ using ForwardDiff: Dual
 using Statistics: mean
 using CUDA, cuDNN
 import CUDA.CUSPARSE: CuSparseMatrixCSC, CuSparseMatrixCSR, CuSparseMatrixCOO
+import GPUArrays: AbstractGPUSparseArray
 using NNlib: batchnorm, ∇batchnorm
 CUDA.allowscalar(false)
 
