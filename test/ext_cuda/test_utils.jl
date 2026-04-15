@@ -21,7 +21,7 @@ function gputest(f, xs...; checkgrad=true, rtol=1e-7, atol=1e-10, broken=false, 
     end
 end
 
-function gputest(f, xs::Vararg{Union{GPUArrays.AbstractGPUArray, GPUArrays.AbstractGPUSparseArray}}; checkgrad=true, rtol=1e-7, atol=1e-10, broken=false, broken_grad=false, kws...)
+function gputest(f, xs::Vararg{Union{AnyCuArray,AbstractCuSparseArray}}; checkgrad=true, rtol=1e-7, atol=1e-10, broken=false, broken_grad=false, kws...)
     gpu_in = xs
     cpu_in = map(CuArray, xs)
 
