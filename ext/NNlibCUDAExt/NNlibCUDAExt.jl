@@ -3,6 +3,7 @@ module NNlibCUDAExt
 using NNlib
 using CUDA
 using Random, Statistics
+using GPUArrays: AbstractGPUSparseArray
 
 include("sampling.jl")
 include("activations.jl")
